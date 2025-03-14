@@ -1,111 +1,19 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #0d1b2a;
-    color: #ffffff;
-}
+const features = [
+    "Biz haqimizda",
+    "Foydalanuvchi bilan o‘zaro aloqada bo‘lish",
+    "Animatsiyalar va effektlar qo‘shish",
+    "Ma’lumotlarni serverdan olish va qayta ishlash",
+];
 
-header {
-    background: #f7df1e;
-    color: #0d1b2a;
-    text-align: center;
-    padding: 20px;
-    font-size: 24px;
-    font-weight: bold;
-}
+const featureContainer = document.querySelector(".feature-container");
 
-nav {
-    background: #1b263b;
-    padding: 10px;
-    text-align: center;
-}
+features.forEach(feature => {
+    let div = document.createElement("div");
+    div.className = "feature-item";
+    div.textContent = feature;
+    featureContainer.appendChild(div);
+});
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #f7df1e;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-main {
-    padding: 20px;
-}
-
-section {
-    background: #1b263b;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(247, 223, 30, 0.3);
-}
-
-.feature-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.feature-item {
-    background: #f7df1e;
-    color: #0d1b2a;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: bold;
-    flex: 1 1 30%;
-}
-
-.code-box {
-    background: #1b263b;
-    padding: 15px;
-    border-radius: 5px;
-    overflow-x: auto;
-    border-left: 5px solid #f7df1e;
-}
-
-pre {
-    margin: 0;
-}
-
-code {
-    color: #f7df1e;
-    font-family: "Courier New", monospace;
-    font-size: 16px;
-}
-
-button {
-    background: #f7df1e;
-    color: #0d1b2a;
-    border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-button:hover {
-    background: #d4c018;
-}
-
-footer {
-    background: #1b263b;
-    text-align: center;
-    color: #f7df1e;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
+document.getElementById("runCode").addEventListener("click", function() {
+    alert("Salom, JavaScript ishladi!");
+});
